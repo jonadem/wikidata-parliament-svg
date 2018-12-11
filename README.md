@@ -23,7 +23,7 @@ yarn install
 npm start
 ```
 
-## Buidling
+## Building
 ```bash
 npm run build
 # creates a new folder /dist with bundled js and index
