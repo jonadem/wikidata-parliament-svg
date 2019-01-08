@@ -8,7 +8,9 @@ WHERE
     ?statement pq:P4100 ?party .
     OPTIONAL {?party wdt:P462 ?color .
         ?color wdt:P465 ?colorrgb .}
-    OPTIONAL {?party wdt:P465 ?rgb .}    
+    OPTIONAL {?party wdt:P465 ?rgb .}
+    OPTIONAL { ?statement pq:P582 ?end }
+    FILTER(!BOUND(?end) || ?end > NOW())  
 
 	SERVICE wikibase:label { bd:serviceParam wikibase:language "${lang},de" }
 }
